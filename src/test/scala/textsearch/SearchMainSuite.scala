@@ -27,7 +27,7 @@ class SearchMainSuite extends FunSuite {
 
     obtained match{
       case index: Program.Index =>
-        assert(index.filesAndWords.sizeIs == 28)
+        assert(index.filesAndWords.sizeIs == 27)
       case _ =>
         fail("Failed to generate a Program.Index")
     }
@@ -60,9 +60,8 @@ class SearchMainSuite extends FunSuite {
 
   // test match word with apostrophe (Trader's Cove should have a match in 203.txt)
 
-  // regex: "[^\W\d](\w|[-']{1,2}(?=\w))*"
   // regex: "[^\W\d]([A-Za-z]|[-'](?=[A-Za-z]))*"
-  //    => matches a sequence of letters interrupted by, at most, one ' or -
+  //    => matches a sequence of letters interrupted by, at most, one consecutive ' or -
   //    (trader's state-of-the-art)
   // (y'all'd've is a contrived, yet valid word)
   // TODO: document what a word is in the README

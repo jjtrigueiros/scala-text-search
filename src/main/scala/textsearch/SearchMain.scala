@@ -97,23 +97,25 @@ object Program {
 
     // For a given indexed file, tallies the score for the list of searchWords
     // Returns a tuple of filename and percentage of words matched.
-    def scoreFile(indexedFile: (File, Map[String, Int]), searchWords: Map[String, Int]): (String, Float) ={
+    def scoreFile(indexedFile: (File, Map[String, Int]), searchWords: Map[String, Int]): (String, Double) ={
       val maxScore: Int = searchWords.values.sum
       val filename = indexedFile._1.getName
       val score: Int = searchWords.foldLeft(0)((acc, next) => acc + scoreWord(indexedFile._2, next._1, next._2))
-      val rating: Float = (score.toFloat/maxScore.toFloat)*100
+      val rating: Double = (score.toDouble/maxScore.toDouble)*100
       (filename, rating)
     }
 
     print(s"search> ")
     val searchString = readLine()
-    // TODO: Make it print the ranking of each file and its corresponding score
+    // parse the list of input keywords
     val searchWords = parseWords(searchString)
-    val ranking: List[(String, Float)] =
+    // calculate and order the ranking for each file paired with the appropriate filename
+    val ranking: List[(String, Double)] =
       indexedFiles.filesAndWords.map(scoreFile(_, searchWords))
         .sortBy(_._2).reverse
+    // print the ranking of each file and its corresponding score
     for((file, rank) <- ranking.take(10)){
-      println("["+rank+"%]: "+file)
+      if(rank>0) println("["+rank+" %]: "+file)
     }
     iterate(indexedFiles)
   }
