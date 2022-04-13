@@ -52,18 +52,17 @@ class SearchMainSuite extends FunSuite {
   // test match simple word
 
   test("Parse example words") {
-    val obtained = Program.parseWords("Trader's state-of-the-art State states States are Stoats")
+    val obtained = Program.parseWords("Trader's state-of-the-art State states States are démodée")
     assert(obtained.contains("state"))
     assert(obtained.contains("trader's"))
     assert(obtained.contains("state-of-the-art"))
+    assert(obtained.contains("démodée"))
+    assert(obtained("states") == 2)
   }
 
-  // test match word with apostrophe (Trader's Cove should have a match in 203.txt)
+  // TODO: test match special word in a specific file (Trader's Cove should have a match in 203.txt)
 
-  // regex: "[^\W\d]([A-Za-z]|[-'](?=[A-Za-z]))*"
-  //    => matches a sequence of letters interrupted by, at most, one consecutive ' or -
-  //    (trader's state-of-the-art)
-  // (y'all'd've is a contrived, yet valid word)
-  // TODO: document what a word is in the README
+  // TODO: test match multiples of a certain word in a file
 
+  // TODO: as complete a test as possible (integration)
 }

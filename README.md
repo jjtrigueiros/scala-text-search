@@ -5,10 +5,15 @@ and then accepts queries for words found in their contents.
 Results are returned as a percent score of the queried words matched 
 for up to 10 highest scoring files, ordered by score.
 
-A word is defined as a series of case-insensitive letters (a-z, A-Z) each separated by up to one consecutive hyphen or apostrophe.
-Ex: "some", "I've", "state-of-the-art"
-
 Queries with multiple instances of the same word are accepted (ex.: "tomato tomato some some").
+
+#### Assumptions:
+ - Words are case-insensitive sequences of letters, each separated by up to one consecutive hyphen or apostrophe.
+   - Ex.: "some", "I've", "state-of-the-art".
+ - Letters are unicode characters in the unicode blocks "Basic Latin" or "Latin-1 Supplement", 
+   more specifically any letter matching the regex [a-zA-ZÀ-ÖØ-öø-ÿ].
+   - Ex.: "a", "M", "ç", "Æ", "ß"
+
 
 
 

@@ -49,7 +49,7 @@ object Program {
     // Word defined as a case-insensitive sequence of letters
     // which can be interrupted by one consecutive hyphen or apostrophe
     // Ex.: banana, should've, state-of-the-art
-    val wordPattern: Regex = "[^\\W\\d]([A-Za-z]|[-'](?=[A-Za-z]))*".r
+    val wordPattern: Regex = "[a-zA-ZÀ-ÖØ-öø-ÿ]([a-zA-ZÀ-ÖØ-öø-ÿ]|[-'](?=[a-zA-ZÀ-ÖØ-öø-ÿ]))*".r
     wordPattern.findAllIn(src)
       .toList.map(word => word.toLowerCase)
       .groupBy(identity)
