@@ -2,7 +2,7 @@ package textsearch
 
 import java.io.File
 import scala.annotation.tailrec
-import scala.io.Source
+import scala.io.{Codec, Source}
 import scala.util.{Failure, Success, Try, Using}
 import scala.util.matching.Regex
 
@@ -60,18 +60,31 @@ object Program {
     def readFile(file: File): Try[String] = {
       Using(Source.fromFile(file)){
         open_file => open_file.getLines().reduceLeft(_+_)
-      }
+      }.orElse(
+        Using(Source.fromFile(file)(Codec("ISO-8859-1"))){
+          open_file => open_file.getLines().reduceLeft(_+_)
+        }
+      )
     }
 
     // filter for valid .txt files
     val files = directory.listFiles.filter { f => f.isFile && f.getName.endsWith(".txt") }.toList
     // attempt to open each file, then filter out files that could not be opened
     val listOfTries: List[(File, Try[String])] = files zip files.map(f => readFile(f))
-    // TODO: Alert user if a .txt file could not be read
+
+    // separate successful and unsuccessful cases
+    val (filesReadSuccessfully, filesCouldNotBeRead) = listOfTries.partition(_._2.isSuccess)
+
+    // print the unsuccessful cases
+    filesCouldNotBeRead.foreach {
+      case (file, failure) =>
+        println(s"Error parsing ${file.getName}: $failure. Maybe the encoding is unsupported?")
+    }
+
+    // convert List[(File, Success[String])] to Try[List[(File, String)]]
     val tryFilesAndContents: Try[List[(File, String)]] = {
       Try(
-        listOfTries.filter(_._2.isSuccess)
-          .map(fileAndContents => (fileAndContents._1, fileAndContents._2.get))
+        filesReadSuccessfully.map(fileAndContents => (fileAndContents._1, fileAndContents._2.get))
       )
     }
 

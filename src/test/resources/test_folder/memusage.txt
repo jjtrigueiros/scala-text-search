@@ -234,7 +234,7 @@ Histogram for block sizes:
 $ \fBmemusagestat memusage.dat memusage.png\fP
 .EE
 .in
-.SS textsearch.Program source
+.SS Program source
 .EX
 #include <stdio.h>
 #include <stdlib.h>

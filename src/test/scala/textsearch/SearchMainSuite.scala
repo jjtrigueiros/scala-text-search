@@ -27,29 +27,11 @@ class SearchMainSuite extends FunSuite {
 
     obtained match{
       case index: Program.Index =>
-        assert(index.filesAndWords.sizeIs == 27)
+        assert(index.filesAndWords.sizeIs == 28)
       case _ =>
         fail("Failed to generate a Program.Index")
     }
   }
-
-  //test("Ignores an open file"){
-  //  val filepath: String = getClass.getResource("/test_folder/203.txt").getPath
-  //  Using(Source.fromFile(filepath)){
-  //    open_file =>
-  //      val path: String = getClass.getResource("/test_folder").getPath
-  //      val test_args: Array[String] = Array(path)
-  //      val obtained = Program.readDirectory(test_args).fold(println, dir => Program.index(dir))
-  //      obtained match{
-  //        case obtained: Program.Index =>
-  //          assert(obtained.filesAndWords.sizeIs == 9999) // not working
-  //        case _ =>
-  //          fail("Obtained something other than a Program.Index")
-  //      }
-  //  }
-  //}
-
-  // test match simple word
 
   test("Parse example words") {
     val obtained = Program.parseWords("Trader's state-of-the-art State states States are démodée")
@@ -61,8 +43,11 @@ class SearchMainSuite extends FunSuite {
   }
 
   // TODO: test match special word in a specific file (Trader's Cove should have a match in 203.txt)
+  //test("Match specific words") {
+  //
+  //}
 
   // TODO: test match multiples of a certain word in a file
 
-  // TODO: as complete a test as possible (integration)
+  // TODO: scoring tests
 }

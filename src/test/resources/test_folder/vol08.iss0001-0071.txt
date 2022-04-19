@@ -3218,7 +3218,7 @@ ALL calling cards cost something to use. In MOST cases this is true, yet
 I CAN use my AT&T Calling Card and NOT invoke ANY surcharge if I call
 at specific times.
 
-        If a customer is part of the AT&T "Reach Out America" textsearch.Program, where
+        If a customer is part of the AT&T "Reach Out America" Program, where
 one pays $7.55 an hour for OUT-OF-STATE long distance calls after 10PM, he
 can also subscribe to an additional Calling Card Plan. Customers who are
 on the "Reach Out America" do NOT pay the 'initial surcharge' when they make
@@ -12197,7 +12197,7 @@ January 10, 1989.
 
 
 
-General Chair:                   textsearch.Program Committee:
+General Chair:                   Program Committee:
 Paul Brusil, MITRE, USA          Sudhir  Aggrawal,  Bell   Com.
                                  Res., USA
 
@@ -12212,7 +12212,7 @@ Dan Stokesberry, NBS, USA        USA
                                  Deborah Estrin, U.  of  South.
                                  California, USA
 
-textsearch.Program Co-Chair                 Guy  Juanole,  LAAS  du  CNRS,
+Program Co-Chair                 Guy  Juanole,  LAAS  du  CNRS,
 Branislav Meandzija, SMU, USA    France
 
                                  Kim   Kappel,   Digital   Com.
@@ -12221,7 +12221,7 @@ Branislav Meandzija, SMU, USA    France
                                  Dipak  Khakhar,  Lund  Univer-
                                  sity, Sweden
 
-textsearch.Program Co-Chair                 Gautam Kar, IBM Research, USA
+Program Co-Chair                 Gautam Kar, IBM Research, USA
 Jil Westcott, BBN Labs., USA
                                  Yoshikazu   Kobayashi,    IBM,
                                  Japan
@@ -12568,7 +12568,7 @@ January 10, 1989.
 
 
 
-General Chair:                   textsearch.Program Committee:
+General Chair:                   Program Committee:
 Paul Brusil, MITRE, USA          Sudhir  Aggrawal,  Bell   Com.
                                  Res., USA
 
@@ -12583,7 +12583,7 @@ Dan Stokesberry, NBS, USA        USA
                                  Deborah Estrin, U.  of  South.
                                  California, USA
 
-textsearch.Program Co-Chair                 Guy  Juanole,  LAAS  du  CNRS,
+Program Co-Chair                 Guy  Juanole,  LAAS  du  CNRS,
 Branislav Meandzija, SMU, USA    France
 
                                  Kim   Kappel,   Digital   Com.
@@ -12592,7 +12592,7 @@ Branislav Meandzija, SMU, USA    France
                                  Dipak  Khakhar,  Lund  Univer-
                                  sity, Sweden
 
-textsearch.Program Co-Chair                 Gautam Kar, IBM Research, USA
+Program Co-Chair                 Gautam Kar, IBM Research, USA
 Jil Westcott, BBN Labs., USA
                                  Yoshikazu   Kobayashi,    IBM,
                                  Japan
@@ -14024,7 +14024,7 @@ to discourage use of alternative long distance services???)
 -- 
 Ron Heiby, heiby@mcdchg.UUCP	Moderator: comp.newprod & comp.unix
 "I believe in the Tooth Fairy."  "I believe in Santa Claus."
-	"I believe in the future of the Space textsearch.Program."
+	"I believe in the future of the Space Program."
 
 ------------------------------
 

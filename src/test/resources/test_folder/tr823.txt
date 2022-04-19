@@ -1,6 +1,6 @@
 
 
-The Internet Worm textsearch.Program: An Analysis
+The Internet Worm Program: An Analysis 
 
 Purdue Technical Report CSD-TR-823 
 
@@ -41,7 +41,7 @@ such copies must include a copy of this title page and copyright
 notice. Any other reproduction, publication, or use is strictly 
 prohibited without express written permission. November 29, 1988 
 
-The Internet Worm textsearch.Program: An Analysis
+The Internet Worm Program: An Analysis 
 Purdue Technical Report CSD-TR-823 
 Eugene H. Spafford 
 Department of Computer Sciences 
@@ -1834,7 +1834,7 @@ warren water weenie whatnot whiting whitney will william
 williamsburg willie winston wisconsinwizardwombat woodwind 
 wormwood yacov yang yellowstone yosemite zap zimmerman 
 
-         Appendix B The Vector textsearch.Program
+         Appendix B The Vector Program
 
 The worm was brought over to each machine it infected via the 
 actions of a small program I call the vector program. Other 
