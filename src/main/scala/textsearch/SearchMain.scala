@@ -126,10 +126,14 @@ object Program {
     val ranking: List[(String, Double)] =
       indexedFiles.filesAndWords.map(scoreFile(_, searchWords))
         .sortBy(_._2).reverse
-    // print the ranking of each file and its corresponding score
-    for((file, rank) <- ranking.take(10)){
-      if(rank>0) println("["+rank+" %]: "+file)
-    }
+
+    // print the ranking of (up to) the top 10 files and their corresponding scores
+    if(ranking.head._2 > 0)
+      for((file, rank) <- ranking.take(10)){
+        if(rank>0) println("["+rank+" %]: "+file)
+      }
+    else
+      println("no matches found")
     iterate(indexedFiles)
   }
 }

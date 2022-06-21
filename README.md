@@ -8,8 +8,10 @@ for up to 10 highest scoring files, ordered by score.
 Queries with multiple instances of the same word are accepted (ex.: "tomato tomato some some").
 
 #### Assumptions:
- - Files are encoded in UTF-8 or ISO-8859-1. If an unsupported character is detected, an error message will be displayed.
-   - However, please note that an unsupported filetype can be read as a series of supported characters and produce incorrect results.
+ - Files are encoded in UTF-8 or ISO-8859-1. If an unsupported character is detected, an error message will be 
+   displayed.
+   - However, please note that an unsupported filetype can be read as a series of supported characters and produce 
+     incorrect results.
  - Words are case-insensitive sequences of letters, each separated by up to one consecutive hyphen or apostrophe.
    - Ex.: "some", "I've", "state-of-the-art".
  - Letters are unicode characters in the unicode blocks "Basic Latin" or "Latin-1 Supplement", 
@@ -21,7 +23,8 @@ Queries with multiple instances of the same word are accepted (ex.: "tomato toma
 
 ## Instructions
 
-The program can be started from the SearchMain object in the package textsearch. The first argument should be the path to a directory containing text files.
+The program can be started from the SearchMain object in the package textsearch. 
+The first argument should be the path to a directory containing text files.
 Example below:
 
 ```
